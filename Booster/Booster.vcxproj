@@ -139,8 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Booster.cpp" />
     <ClCompile Include="Error.cpp" />
+    <ClCompile Include="Booster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Booster.h" />

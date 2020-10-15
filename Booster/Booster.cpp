@@ -32,7 +32,7 @@ int main(int argc, const char* argv[])
 		&returnedData, // amount of bytes written
 		nullptr
 	);
-	
+
 	CloseHandle(device);
 
 	if (!success) return Error("Priority change failed...");
