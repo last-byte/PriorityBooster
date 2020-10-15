@@ -6,7 +6,7 @@
 
 typedef ULONG DWORD;
 
-typedef struct ThreadData
+typedef struct _THREAD_DATA
 {
 	DWORD ThreadId; // contains the ID of the thread
 	int Priority; // the priority we want to set on the thread
