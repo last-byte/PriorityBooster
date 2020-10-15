@@ -25,16 +25,16 @@ NTSTATUS DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING Regi
 
 	if (!NT_SUCCESS(status))
 	{
-		KdPrint(("Failed to create device. Error: 0x%08X\n"), status);
+		KdPrint(("Failed to create device. Error: 0x%08X\n", status));
 		return status;
 	}
 
 	UNICODE_STRING symlink = RTL_CONSTANT_STRING(L"\\??\\PriorityBooster"); // symbolic link named PriorityBooster under GLOBAL??
-	status = IoCreateSymbolicLink(&deviceName, &symlink); // try to create symbolink link
+	status = IoCreateSymbolicLink(&symlink, &deviceName); // try to create symbolink link
 
 	if (!NT_SUCCESS(status))
 	{
-		KdPrint(("Failed to create symlink. Error: 0x%08X\n"), status);
+		KdPrint(("Failed to create symlink. Error: 0x%08X\n", status));
 		IoDeleteDevice(DeviceObject);
 		return status;
 	}

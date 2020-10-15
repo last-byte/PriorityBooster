@@ -142,6 +142,7 @@
     <ClCompile Include="PriorityBoosterDeviceControl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Definitions.h" />
     <ClInclude Include="PriorityBooster.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
